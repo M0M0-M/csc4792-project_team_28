@@ -96,7 +96,6 @@ Some notices may belong to multiple categories, complicating classification.
 Limited labeled training data could impact model performance.
 
 Constraints:
-
 Legal constraint: Must comply with any copyright or government data use regulations.
 
 Mitigation Strategies:
