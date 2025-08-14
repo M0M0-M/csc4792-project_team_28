@@ -45,3 +45,7 @@ Risks:
 
 Constraints:
 - Legal constraint: Must comply with any copyright or government data use regulations.
+
+## 1.7 Expected Benefits
+
+- The system will make Gazette notices faster to find, will help to improve transparency, and support decision-making for professionals and the public who want to make use of the system.
