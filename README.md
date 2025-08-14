@@ -1,9 +1,9 @@
-1. Business Understanding
-1.1 Problem Statement
+1. BUSINESS UNDERSTANDING
+1.1 PROBLEM STATEMENT
 
 The Zambia Government Gazette publishes official notices, legal updates, tenders, and public announcements. These documents are published in PDF format, and often unstructured, making it difficult for stakeholders such as lawyers, journalists, researchers, and the general public to quickly find relevant information. Manual searching is time-consuming and prone to oversight. There is a need for an automated method to classify Gazette notices into categories (e.g., legal notices, tenders, appointments, public warnings) for faster retrieval and analysis.
 
-1.2 Business Objectives
+1.2 BUSINESS OBJECTIVES
 
 The primary objective is to develop a system that automatically processes and classifies Gazette publications into predefined categories. Success will mean that end users can:
 
@@ -15,15 +15,7 @@ Gain improved access to relevant legal or public information.
 
 From a real-world perspective, this will increase efficiency for professionals and citizens who rely on the Gazette for important updates.
 
-Additional Benefits:
-
-Enhance transparency and accessibility of government information.
-
-Enable advanced search and analytics for policy makers and researchers.
-
-Support digital archiving for historical analysis of government notices.
-
-1.3 Data Mining Goals
+1.3 DATA MINING GOALS
 
 We will build a text classification model that:
 
@@ -31,19 +23,13 @@ Extracts text from Gazette PDFs.
 
 Preprocesses the text (cleaning, tokenization, stopword removal).
 
-Classify each notice into categories.
+Classifies each notice into categories.
 
 Outputs labeled data for easy search and retrieval.
 
-The approach will likely involve natural language processing (NLP) and machine learning algorithms such as Logistic Regression, or Support Vector Machines.
+The approach will likely involve Natural Language Processing (NLP) and machine learning algorithms such as Logistic Regression or Support Vector Machines.
 
-Potential Extensions:
-
-Incorporate deep learning methods (e.g., BERT, transformers) for better text understanding.
-
-Integrate with a web interface for real-time search and filtering.
-
-1.4 Initial Success Criteria
+1.4 INITIAL SUCCESS CRITERIA
 
 The project will be considered successful if:
 
@@ -55,13 +41,7 @@ The pipeline can handle at least 10 new Gazette PDFs per month without major man
 
 Users confirm that classification results improve search speed and relevance compared to manual reading.
 
-Long-Term Goals:
-
-Expand the number of supported categories as more data is available.
-
-Integrate feedback loops so users can correct misclassifications.
-
-1.5 Scope & Assumptions
+1.5 SCOPE & ASSUMPTIONS
 
 Scope:
 
@@ -79,13 +59,7 @@ Categories remain consistent over time.
 
 OCR (Optical Character Recognition) will be needed for scanned documents.
 
-Possible Future Scope Expansion:
-
-Multi-language support.
-
-Trend analysis and visualization of Gazette publications over time.
-
-1.6 Risks & Constraints
+1.6 RISKS & CONSTRAINTS
 
 Risks:
 
@@ -96,12 +70,70 @@ Some notices may belong to multiple categories, complicating classification.
 Limited labeled training data could impact model performance.
 
 Constraints:
+
 Legal constraint: Must comply with any copyright or government data use regulations.
 
-Mitigation Strategies:
+2. METHODOLOGY
+2.1 DATA COLLECTION
 
-Use high-quality OCR libraries such as Tesseract with language-specific tuning.
+Download Gazette PDFs from the official Zambia Government Gazette website.
 
-Apply data augmentation techniques to expand the labeled dataset.
+Ensure documents cover a representative period to include diverse categories.
 
-Work closely with domain experts to refine category definitions.
+Maintain a record of file metadata (date, publication number) for reference.
+
+2.2 DATA PREPROCESSING
+
+Convert PDFs to text using OCR for scanned documents.
+
+Remove irrelevant elements (headers, footers, page numbers).
+
+Tokenize text and remove stopwords, punctuation, and special characters.
+
+Standardize text formatting (e.g., lowercasing, stemming).
+
+2.3 MODEL SELECTION
+
+Evaluate multiple classification algorithms: Logistic Regression, Support Vector Machines, and Random Forest.
+
+Use TF-IDF or word embeddings to represent text features.
+
+Optimize model parameters using cross-validation.
+
+2.4 EVALUATION METRICS
+
+Accuracy, precision, recall, and F1-score for each category.
+
+Confusion matrix to identify misclassification trends.
+
+User feedback on relevance and usefulness of classified notices.
+
+3. TOOLS AND TECHNOLOGIES
+
+Programming Languages: Python
+
+Libraries: scikit-learn, pandas, NumPy, NLTK, spaCy, PyPDF2, Tesseract OCR
+
+Environment: Jupyter Notebook / Python IDE
+
+Version Control: Git / GitHub
+
+4. EXPECTED OUTCOMES
+
+Automated classification of Gazette notices into predefined categories.
+
+A searchable dataset with labeled notices for faster retrieval.
+
+Insights into the distribution and frequency of notice types.
+
+Reduced manual effort for users accessing Gazette information.
+
+5. FUTURE ENHANCEMENTS
+
+Implement a web interface for searching and filtering classified notices.
+
+Incorporate advanced NLP techniques like BERT for improved classification accuracy.
+
+Expand to multilingual Gazettes or other official publications.
+
+Introduce trend analysis and reporting for frequently published notice types.
