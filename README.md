@@ -35,7 +35,7 @@ The project will be considered successful if:
 
 The classification model achieves at least 80% accuracy on the test dataset.
 
-Categories are clearly defined, distinct, and interpretable.
+Categories are clearly and vividly defined, distinct, and interpretable.
 
 The pipeline can handle at least 10 new Gazette PDFs per month without major manual intervention.
 
