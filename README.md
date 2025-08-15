@@ -74,8 +74,7 @@ Constraints:
 Legal constraint: Must comply with any copyright or government data use regulations.
 
 ## 1.7 Expected Benefits
-The System will make gazette notices faster to find, will help to improve transparency, and support
-decision-making for professionals and the public who want to make use of it.
+The system will enable faster retrieval of Gazette notices, enhance transparency, and support informed decision-making for both professionals and the public.
 
 # 2. METHODOLOGY
 ## 2.1 DATA COLLECTION
