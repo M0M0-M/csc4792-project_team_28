@@ -1,3 +1,16 @@
+
+# Zambia Gazette Text Classification Project
+
+
+
+## Table of Contents
+1. [Business Understanding](#1-business-understanding)  
+2. [Methodology](#2-methodology)  
+3. [Tools and Technologies](#3-tools-and-technologies)  
+4. [Expected Outcomes](#4-expected-outcomes)  
+5. [Future Enhancements](#5-future-enhancements) 
+
+
 # 1. BUSINESS UNDERSTANDING
 ## 1.1 PROBLEM STATEMENT
 
