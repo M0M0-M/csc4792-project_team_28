@@ -5,10 +5,11 @@
 
 ## Table of Contents
 1. [Business Understanding](#1-business-understanding)  
-2. [Methodology](#2-methodology)  
-3. [Tools and Technologies](#3-tools-and-technologies)  
-4. [Expected Outcomes](#4-expected-outcomes)  
-5. [Future Enhancements](#5-future-enhancements) 
+2. [Methodology](##1.8-methodology)  
+3. [Tools and Technologies](##1.9-tools-and-technologies)  
+4. [Expected Outcomes](##1.10-expected-outcomes)  
+5. [Future Enhancements](##1.11-future-enhancements)
+6. [Data Understanding](#2-data-understanding) 
 
 
 # 1. BUSINESS UNDERSTANDING
@@ -89,15 +90,15 @@ Legal constraint: Must comply with any copyright or government data use regulati
 ## 1.7 Expected Benefits
 The system will enable faster retrieval of Gazette notices, enhance transparency, and support informed decision-making for both professionals and the public.
 
-# 2. METHODOLOGY
-## 2.1 DATA COLLECTION
+## 1.8 METHODOLOGY
+### 1.8.1 DATA COLLECTION
 
 Download Gazette PDFs from the official Zambia Government Gazette website.
 
 Ensure documents cover a representative period to include diverse categories.
 
 Maintain a record of file metadata (date, publication number) for reference.
-## 2.2 DATA PREPROCESSING
+### 1.8.2 DATA PREPROCESSING
 
 Convert PDFs to text using OCR for scanned documents.
 
@@ -107,7 +108,7 @@ Tokenize text and remove stopwords, punctuation, and special characters.
 
 Standardize text formatting (e.g., lowercasing, stemming).
 
-## 2.3 MODEL SELECTION
+### 1.8.3 MODEL SELECTION
 
 Evaluate multiple classification algorithms: Logistic Regression, Support Vector Machines, and Random Forest.
 
@@ -115,7 +116,7 @@ Use TF-IDF or word embeddings to represent text features.
 
 Optimize model parameters using cross-validation.
 
-## 2.4 EVALUATION METRICS
+### 1.8.4 EVALUATION METRICS
 
 Accuracy, precision, recall, and F1-score for each category.
 
@@ -123,7 +124,7 @@ Confusion matrix to identify misclassification trends.
 
 User feedback on relevance and usefulness of classified notices.
 
-# 3. TOOLS AND TECHNOLOGIES
+## 1.9 TOOLS AND TECHNOLOGIES
 
 Programming Languages: Python
 
@@ -133,7 +134,7 @@ Environment: Jupyter Notebook / Python IDE
 
 Version Control: Git / GitHub
 
-# 4. EXPECTED OUTCOMES
+## 1.10 EXPECTED OUTCOMES
 
 Automated classification of Gazette notices into predefined categories.
 
@@ -143,7 +144,7 @@ Insights into the distribution and frequency of notice types.
 
 Reduced manual effort for users accessing Gazette information.
 
-# 5. FUTURE ENHANCEMENTS
+## 1.11 FUTURE ENHANCEMENTS
 
 Implement a web interface for searching and filtering classified notices.
 
@@ -152,3 +153,21 @@ Incorporate advanced NLP techniques like BERT for improved classification accura
 Expand to multilingual Gazettes or other official publications.
 
 Introduce trend analysis and reporting for frequently published notice types.
+
+
+# 2. Data Understanding
+
+## 2.1 Loading the Dataset
+( Loading CSV into Pandas DataFrame.)
+
+## 2.2 Initial Exploration
+- `df.shape`, `df.head()` and explain results.  
+- `df.info()`, `df.describe(include="all")` and explain results.  
+
+## 2.3 Visual Exploration
+- Create histograms for numerical columns.  
+- Create bar plots for categorical columns. 
+
+## 2.4 Summary of Findings
+- Summary on dataset structure, missing values, distributions, and early insights.
+
