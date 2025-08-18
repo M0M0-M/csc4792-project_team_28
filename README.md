@@ -153,9 +153,6 @@ Incorporate advanced NLP techniques like BERT for improved classification accura
 Expand to multilingual Gazettes or other official publications.
 
 Introduce trend analysis and reporting for frequently published notice types.
-<<<<<<< HEAD
-"This commit is from my CS email account."
-=======
 
 
 # 2. Data Understanding
@@ -173,5 +170,4 @@ Introduce trend analysis and reporting for frequently published notice types.
 
 ## 2.4 Summary of Findings
 - Summary on dataset structure, missing values, distributions, and early insights.
->>>>>>> acd6d1c83e1e19ca0256a1a373bd2b05dc03c6c9
 
