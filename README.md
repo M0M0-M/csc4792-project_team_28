@@ -169,5 +169,5 @@ Introduce trend analysis and reporting for frequently published notice types.
 - Create bar plots for categorical columns. 
 
 ## 2.4 Summary of Findings
-- Summary on dataset structure, missing values, distributions, and early insights.
+- From our initial exploration of the dataset, we observed that the numerical variables have different types of distributions. Some columns appear to be fairly normally distributed, while others are highly skewed with the presence of potential outliers. We also noted that a few columns contain missing values, which will require handling in the data preparation stage. These observations suggest that transformations such as normalization, as well as careful treatment of outliers and missing data, may be necessary before further analysis..
 
