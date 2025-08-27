@@ -183,3 +183,46 @@ Key objectives of this phase include:
 - **Data Transformation**: Converting the dataset into formats usable by machine learning algorithms, such as encoding categorical variables and standardizing numerical features.  
 
 Every decision taken in this phase will be clearly documented with explanations for the chosen cleaning and transformation methods. The final output of this phase will be a clean, structured dataset ready to be used in the Modeling phase.
+=======
+
+# 2. Data Understanding
+
+The Data Understanding phase focuses on gaining an initial insight into the dataset, identifying its main characteristics, and detecting potential quality issues that may affect later analysis or modeling. In this phase, we work with the Gazette dataset extracted from Zambia Government Gazette PDFs to understand its structure, content, and variability.
+
+Key objectives of this phase include:  
+
+- Loading the dataset into a Pandas DataFrame and reviewing its structure and columns.  
+- Performing initial exploration using basic summary statistics and data inspection techniques to identify missing values, data types, and textual characteristics.  
+- Creating visualizations to better understand distributions of numerical attributes (e.g., word counts, character lengths) and categorical attributes (e.g., number of pages per document).  
+- Generating early insights that will guide preprocessing, feature engineering, and modeling decisions in subsequent phases.
+
+## Summary of Findings
+During this phase, we explored the raw dataset extracted from the Zambia Government Gazette PDFs. The dataset consists of the following key columns:
+
+- `doc_id`: unique identifier for each PDF document
+- `filename`: name of the PDF file
+- `page`: page number within the document
+- `text`: OCR-extracted text from each page
+- `char_len`: number of characters per page
+- `word_count`: number of words per page
+
+### Key Observations
+
+1. **Dataset Size and Structure**
+   - The dataset contains 133 pages extracted from 10 PDF documents.
+   - Each row represents one page of a Gazette PDF.
+
+2. **Text Characteristics**
+   - Character lengths per page range from 460 to 7608, with an average of 3670.
+   - Word counts per page range from 63 to 1315, with an average of 580.
+
+3. **Distribution of Pages Across Documents**
+   - Some PDFs are short (1–2 pages), while others contain multiple pages.
+
+4. **Data Quality Considerations**
+   - Some pages may have very little text due to OCR errors.
+   - Text may contain headers, footers, or formatting artifacts requiring cleaning in the next phase.
+
+### Conclusion
+
+This initial exploration provides a clear understanding of the dataset’s structure, content distribution, and potential quality issues. It confirms that the dataset is suitable for text classification tasks but will require preprocessing before modeling.
