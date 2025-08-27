@@ -172,20 +172,6 @@ Introduce trend analysis and reporting for frequently published notice types.
 - From our initial exploration of the dataset, we observed that the numerical variables have different types of distributions. Some columns appear to be fairly normally distributed, while others are highly skewed with the presence of potential outliers. We also noted that a few columns contain missing values, which will require handling in the data preparation stage. These observations suggest that transformations such as normalization, as well as careful treatment of outliers and missing data, may be necessary before further analysis..
 
 
-# 3. Data Preparation
-
-The Data Preparation phase focuses on cleaning, transforming, and structuring the dataset so that it is suitable for modeling. This stage is often the most time-consuming but also the most critical, as the quality of the data directly impacts the performance of machine learning models.  
-
-Key objectives of this phase include:  
-
-- **Data Cleaning**: Addressing issues identified during the Data Understanding phase such as missing values, duplicates, or inconsistencies in the text data.  
-- **Feature Engineering**: Creating new features from the raw text (e.g., word counts, character lengths, presence of keywords) that may improve model performance.  
-- **Data Transformation**: Converting the dataset into formats usable by machine learning algorithms, such as encoding categorical variables and standardizing numerical features.  
-
-Every decision taken in this phase will be clearly documented with explanations for the chosen cleaning and transformation methods. The final output of this phase will be a clean, structured dataset ready to be used in the Modeling phase.
-=======
-
-# 2. Data Understanding
 
 The Data Understanding phase focuses on gaining an initial insight into the dataset, identifying its main characteristics, and detecting potential quality issues that may affect later analysis or modeling. In this phase, we work with the Gazette dataset extracted from Zambia Government Gazette PDFs to understand its structure, content, and variability.
 
@@ -226,3 +212,15 @@ During this phase, we explored the raw dataset extracted from the Zambia Governm
 ### Conclusion
 
 This initial exploration provides a clear understanding of the dataset’s structure, content distribution, and potential quality issues. It confirms that the dataset is suitable for text classification tasks but will require preprocessing before modeling.
+
+# 3. Data Preparation
+
+The Data Preparation phase focuses on cleaning, transforming, and structuring the dataset so that it is suitable for modeling. This stage is often the most time-consuming but also the most critical, as the quality of the data directly impacts the performance of machine learning models.  
+
+Key objectives of this phase include:  
+
+- **Data Cleaning**: Addressing issues identified during the Data Understanding phase such as missing values, duplicates, or inconsistencies in the text data.  
+- **Feature Engineering**: Creating new features from the raw text (e.g., word counts, character lengths, presence of keywords) that may improve model performance.  
+- **Data Transformation**: Converting the dataset into formats usable by machine learning algorithms, such as encoding categorical variables and standardizing numerical features.  
+
+Every decision taken in this phase will be clearly documented with explanations for the chosen cleaning and transformation methods. The final output of this phase will be a clean, structured dataset ready to be used in the Modeling phase.
