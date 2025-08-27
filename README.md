@@ -1,3 +1,17 @@
+
+# Zambia Gazette Text Classification Project
+
+
+
+## Table of Contents
+1. [Business Understanding](#1-business-understanding)  
+2. [Methodology](##1.8-methodology)  
+3. [Tools and Technologies](##1.9-tools-and-technologies)  
+4. [Expected Outcomes](##1.10-expected-outcomes)  
+5. [Future Enhancements](##1.11-future-enhancements)
+6. [Data Understanding](#2-data-understanding) 
+
+
 # 1. BUSINESS UNDERSTANDING
 ## 1.1 PROBLEM STATEMENT
 
@@ -74,18 +88,17 @@ Constraints:
 Legal constraint: Must comply with any copyright or government data use regulations.
 
 ## 1.7 Expected Benefits
-The System will make gazette notices faster to find, will help to improve transparency, and support
-decision-making for professionals and the public who want to make use of it.
+The system will enable faster retrieval of Gazette notices, enhance transparency, and support informed decision-making for both professionals and the public.
 
-# 2. METHODOLOGY
-## 2.1 DATA COLLECTION
+## 1.8 METHODOLOGY
+### 1.8.1 DATA COLLECTION
 
 Download Gazette PDFs from the official Zambia Government Gazette website.
 
 Ensure documents cover a representative period to include diverse categories.
 
 Maintain a record of file metadata (date, publication number) for reference.
-## 2.2 DATA PREPROCESSING
+### 1.8.2 DATA PREPROCESSING
 
 Convert PDFs to text using OCR for scanned documents.
 
@@ -95,7 +108,7 @@ Tokenize text and remove stopwords, punctuation, and special characters.
 
 Standardize text formatting (e.g., lowercasing, stemming).
 
-## 2.3 MODEL SELECTION
+### 1.8.3 MODEL SELECTION
 
 Evaluate multiple classification algorithms: Logistic Regression, Support Vector Machines, and Random Forest.
 
@@ -103,7 +116,7 @@ Use TF-IDF or word embeddings to represent text features.
 
 Optimize model parameters using cross-validation.
 
-## 2.4 EVALUATION METRICS
+### 1.8.4 EVALUATION METRICS
 
 Accuracy, precision, recall, and F1-score for each category.
 
@@ -111,7 +124,7 @@ Confusion matrix to identify misclassification trends.
 
 User feedback on relevance and usefulness of classified notices.
 
-# 3. TOOLS AND TECHNOLOGIES
+## 1.9 TOOLS AND TECHNOLOGIES
 
 Programming Languages: Python
 
@@ -121,7 +134,7 @@ Environment: Jupyter Notebook / Python IDE
 
 Version Control: Git / GitHub
 
-# 4. EXPECTED OUTCOMES
+## 1.10 EXPECTED OUTCOMES
 
 Automated classification of Gazette notices into predefined categories.
 
@@ -131,7 +144,7 @@ Insights into the distribution and frequency of notice types.
 
 Reduced manual effort for users accessing Gazette information.
 
-# 5. FUTURE ENHANCEMENTS
+## 1.11 FUTURE ENHANCEMENTS
 
 Implement a web interface for searching and filtering classified notices.
 
@@ -140,3 +153,76 @@ Incorporate advanced NLP techniques like BERT for improved classification accura
 Expand to multilingual Gazettes or other official publications.
 
 Introduce trend analysis and reporting for frequently published notice types.
+
+
+# 2. Data Understanding
+
+## 2.1 Loading the Dataset
+( Loading CSV into Pandas DataFrame.)
+
+## 2.2 Initial Exploration
+- `df.shape`, `df.head()` and explain results.  
+- `df.info()`, `df.describe(include="all")` and explain results.  
+
+## 2.3 Visual Exploration
+- Create histograms for numerical columns.  
+- Create bar plots for categorical columns. 
+
+## 2.4 Summary of Findings
+- From our initial exploration of the dataset, we observed that the numerical variables have different types of distributions. Some columns appear to be fairly normally distributed, while others are highly skewed with the presence of potential outliers. We also noted that a few columns contain missing values, which will require handling in the data preparation stage. These observations suggest that transformations such as normalization, as well as careful treatment of outliers and missing data, may be necessary before further analysis..
+
+
+# 3. Data Preparation
+
+The Data Preparation phase focuses on cleaning, transforming, and structuring the dataset so that it is suitable for modeling. This stage is often the most time-consuming but also the most critical, as the quality of the data directly impacts the performance of machine learning models.  
+
+Key objectives of this phase include:  
+
+- **Data Cleaning**: Addressing issues identified during the Data Understanding phase such as missing values, duplicates, or inconsistencies in the text data.  
+- **Feature Engineering**: Creating new features from the raw text (e.g., word counts, character lengths, presence of keywords) that may improve model performance.  
+- **Data Transformation**: Converting the dataset into formats usable by machine learning algorithms, such as encoding categorical variables and standardizing numerical features.  
+
+Every decision taken in this phase will be clearly documented with explanations for the chosen cleaning and transformation methods. The final output of this phase will be a clean, structured dataset ready to be used in the Modeling phase.
+=======
+
+# 2. Data Understanding
+
+The Data Understanding phase focuses on gaining an initial insight into the dataset, identifying its main characteristics, and detecting potential quality issues that may affect later analysis or modeling. In this phase, we work with the Gazette dataset extracted from Zambia Government Gazette PDFs to understand its structure, content, and variability.
+
+Key objectives of this phase include:  
+
+- Loading the dataset into a Pandas DataFrame and reviewing its structure and columns.  
+- Performing initial exploration using basic summary statistics and data inspection techniques to identify missing values, data types, and textual characteristics.  
+- Creating visualizations to better understand distributions of numerical attributes (e.g., word counts, character lengths) and categorical attributes (e.g., number of pages per document).  
+- Generating early insights that will guide preprocessing, feature engineering, and modeling decisions in subsequent phases.
+
+## Summary of Findings
+During this phase, we explored the raw dataset extracted from the Zambia Government Gazette PDFs. The dataset consists of the following key columns:
+
+- `doc_id`: unique identifier for each PDF document
+- `filename`: name of the PDF file
+- `page`: page number within the document
+- `text`: OCR-extracted text from each page
+- `char_len`: number of characters per page
+- `word_count`: number of words per page
+
+### Key Observations
+
+1. **Dataset Size and Structure**
+   - The dataset contains 133 pages extracted from 10 PDF documents.
+   - Each row represents one page of a Gazette PDF.
+
+2. **Text Characteristics**
+   - Character lengths per page range from 460 to 7608, with an average of 3670.
+   - Word counts per page range from 63 to 1315, with an average of 580.
+
+3. **Distribution of Pages Across Documents**
+   - Some PDFs are short (1–2 pages), while others contain multiple pages.
+
+4. **Data Quality Considerations**
+   - Some pages may have very little text due to OCR errors.
+   - Text may contain headers, footers, or formatting artifacts requiring cleaning in the next phase.
+
+### Conclusion
+
+This initial exploration provides a clear understanding of the dataset’s structure, content distribution, and potential quality issues. It confirms that the dataset is suitable for text classification tasks but will require preprocessing before modeling.
