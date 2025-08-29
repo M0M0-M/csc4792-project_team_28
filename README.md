@@ -224,3 +224,22 @@ Key objectives of this phase include:
 - **Data Transformation**: Converting the dataset into formats usable by machine learning algorithms, such as encoding categorical variables and standardizing numerical features.  
 
 Every decision taken in this phase will be clearly documented with explanations for the chosen cleaning and transformation methods. The final output of this phase will be a clean, structured dataset ready to be used in the Modeling phase.
+
+
+# 4. Modeling
+
+##  Objective
+The goal of this phase is to build and train a data mining model to classify Gazette pages into meaningful categories based on the semi-automated labels generated earlier.
+
+##  Approach
+Since we now have page-level labels, we adopt a **supervised learning approach** using a **multi-label text classifier**:
+- The TF-IDF matrix created in the Data Preparation phase serves as input features.
+- A **Multinomial Naive Bayes** classifier (wrapped in `OneVsRestClassifier`) is selected for multi-label prediction.
+- The dataset will be split into training and testing sets to evaluate model performance.
+
+## 4.1 Selecting a Data Mining Algorithm
+
+We select **Multinomial Naive Bayes** for the following reasons:
+- Text data represented as a **TF-IDF matrix** is sparse and counts-based, which fits well with Naive Bayes assumptions.
+- Computationally efficient and works well for multi-class and multi-label problems.
+- Easy to implement and interpret, suitable for the initial modeling phase.
