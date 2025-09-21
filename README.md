@@ -1,18 +1,22 @@
 
 # Zambia Gazette Text Classification Project
-
-
-
 ## Table of Contents
 1. [Business Understanding](#1-business-understanding)  
-2. [Methodology](##1.8-methodology)  
-3. [Tools and Technologies](##1.9-tools-and-technologies)  
-4. [Expected Outcomes](##1.10-expected-outcomes)  
-5. [Future Enhancements](##1.11-future-enhancements)
-6. [Data Understanding](#2-data-understanding) 
+2. [Data Understanding](#2-Data-Understanding)  
+3. [Data Preparation](#3-Data-Preparation)  
+4. [Modeling](#4-Modeling)  
+5. [Evaluation](#5-Evaluation)
+6. [Deployment](#6-Deployment)
 
 
 # 1. BUSINESS UNDERSTANDING
+## Table of Contents
+1. [Methodology](##1.8-methodology)  
+2. [Tools and Technologies](##1.9-tools-and-technologies)  
+3. [Expected Outcomes](##1.10-expected-outcomes)  
+4. [Future Enhancements](##1.11-future-enhancements)
+5. [Data Understanding](#2-data-understanding)
+
 ## 1.1 PROBLEM STATEMENT
 
 The Zambia Government Gazette publishes official notices, legal updates, tenders, and public announcements. These documents are published in PDF format, and often unstructured, making it difficult for stakeholders such as lawyers, journalists, researchers, and the general public to quickly find relevant information. Manual searching is time-consuming and prone to oversight. There is a need for an automated method to classify Gazette notices into categories (e.g., legal notices, tenders, appointments, public warnings) for faster retrieval and analysis.
@@ -243,3 +247,36 @@ We select **Multinomial Naive Bayes** for the following reasons:
 - Text data represented as a **TF-IDF matrix** is sparse and counts-based, which fits well with Naive Bayes assumptions.
 - Computationally efficient and works well for multi-class and multi-label problems.
 - Easy to implement and interpret, suitable for the initial modeling phase.
+
+
+#5. Evaluation
+We will use several metrics to evaluate our model, including overall **accuracy** and a detailed **classification report** that provides `precision`, `recall`, and `f1-score` for each category. We will also use a **confusion matrix** to visualize how well the model performed on each class, which is especially important for understanding performance on our minority categories.
+
+#6. Deployment
+
+We chose the  Naive Bayes Classifier for this project. It achieved an accuracy of 88% on the test set. The only failure was on some notices, indicating that the model still struggles with a category that lacks sufficient data (Tenders, Financial & Tax, Legal Notices).
+
+## Key insights gained from this project include:
+
+- The full data pipeline, from PDF text extraction to TF-IDF vectorization, is a viable method for converting unstructured government notices into a format suitable for machine learning.
+
+- Data imbalance is the most significant challenge. Although the Naive Bayes excelled on some classes, its failure to classify a categories with few samples highlights the need for a more balanced/comprehensive dataset to achieve true robustness.
+
+
+## Deployment Plan
+A plausible deployment plan for this model would be a simple web application designed for use by government agencies, legal firms, or researchers. The application would automate the process of categorizing new government gazettes as they are published.
+
+### End-User Interaction
+- Input: The user uploads a new PDF of a government gazette.
+
+- Backend Processing: A backend server running the trained Naive Bayes model performs the full data pipeline:
+
+- Text is extracted and segmented from the uploaded PDF.
+
+- The new notices are preprocessed and transformed into a numerical TF-IDF feature matrix.
+
+- The model then predicts the category for each notice.
+
+- Output: The user is presented with a clean report. This interface would display each notice and its predicted category, making the information easily accessible and searchable.
+
+
