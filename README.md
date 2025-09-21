@@ -249,10 +249,10 @@ We select **Multinomial Naive Bayes** for the following reasons:
 - Easy to implement and interpret, suitable for the initial modeling phase.
 
 
-#5. Evaluation
+# 5. Evaluation
 We will use several metrics to evaluate our model, including overall **accuracy** and a detailed **classification report** that provides `precision`, `recall`, and `f1-score` for each category. We will also use a **confusion matrix** to visualize how well the model performed on each class, which is especially important for understanding performance on our minority categories.
 
-#6. Deployment
+# 6. Deployment
 
 We chose the  Naive Bayes Classifier for this project. It achieved an accuracy of 88% on the test set. The only failure was on some notices, indicating that the model still struggles with a category that lacks sufficient data (Tenders, Financial & Tax, Legal Notices).
 
